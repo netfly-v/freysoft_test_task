@@ -9,6 +9,9 @@ export const AppRouter: React.FC = () => {
     <Routes>
       <Route path={route.main} element={<Home />} />
       <Route path={route.expenses} element={<Expenses />} />
+      <Route path={route.add} element={<div>add</div>} />
+      <Route path={route.calendar} element={<div>calendar</div>} />
+      <Route path={route.settings} element={<div>settings</div>} />
     </Routes>
   );
 };

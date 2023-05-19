@@ -2,6 +2,7 @@ const commonColors = {
   black: '#000000',
   white: '#FFFFFF',
   violet: '#8635F7',
+  orange: '#FF653A',
 };
 
 const backgroundColors = {
