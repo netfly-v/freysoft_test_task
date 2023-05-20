@@ -2,10 +2,10 @@ import {Button, MenuItem, SelectChangeEvent} from '@mui/material';
 import React from 'react';
 import {balance, cardNum, chartData, transactionsData} from '../../mockData/common';
 import {IconSvg} from '../../ui-kit/icons';
+import {Statement} from '../../ui-kit/Statement';
+import {PageWrapper, TitleHeader, Title, ButtonText} from '../styles';
 import {
-  TitleHeader,
   AnalyticsSection,
-  Title,
   BalaceCardTitle,
   BalaceText,
   BalanceCardFooter,
@@ -20,21 +20,11 @@ import {
   ChartBarWrapper,
   ChartWrapper,
   CreditCardWrapper,
-  HomeWrapper,
   MoreIconWrapper,
   StyledMasterCardIcon,
   StyledSelect,
   TransactionSection,
-  TransactionText,
-  TransactionWrapper,
-  TransactionImg,
-  TransactionInfoWrapper,
-  TransactionInfoLeft,
-  TransactionInfoRight,
-  TransactionName,
-  TransactionSum,
 } from './styles';
-import {TransactionProps} from './types';
 
 export const Home: React.FC = () => {
   const [year, setYear] = React.useState('2022');
@@ -43,7 +33,7 @@ export const Home: React.FC = () => {
     setYear(event.target.value as string);
   };
   return (
-    <HomeWrapper>
+    <PageWrapper>
       <BalanceCardSection>
         <CardMiniature />
         <CreditCard />
@@ -61,16 +51,16 @@ export const Home: React.FC = () => {
 
       <TransactionSection>
         <TitleHeader>
-          <Title variant="h2">Analytics</Title>
-          <Button variant="text">
-            <TransactionText variant="body1">View All</TransactionText>
+          <Title variant="h2">Transactions</Title>
+          <Button variant="text" sx={{textTransform: 'none'}}>
+            <ButtonText variant="body1">View All</ButtonText>
           </Button>
         </TitleHeader>
         {transactionsData.map((el) => (
-          <Transaction key={el.name} data={el} />
+          <Statement key={el.name} data={el} type="transactions" />
         ))}
       </TransactionSection>
-    </HomeWrapper>
+    </PageWrapper>
   );
 };
 
@@ -116,23 +106,5 @@ const AnalyticsChart: React.FC = () => {
         </ChartBarWrapper>
       ))}
     </ChartWrapper>
-  );
-};
-
-export const Transaction: React.FC<TransactionProps> = ({data}) => {
-  return (
-    <TransactionWrapper>
-      <TransactionImg alt={data.name} src={data.img} />
-      <TransactionInfoWrapper>
-        <TransactionInfoLeft>
-          <TransactionName variant="h6">{data.name}</TransactionName>
-          <TransactionText variant="body1">{data.account}</TransactionText>
-        </TransactionInfoLeft>
-        <TransactionInfoRight>
-          <TransactionSum>${data.sum}</TransactionSum>
-          <TransactionText variant="body1">{data.date}</TransactionText>
-        </TransactionInfoRight>
-      </TransactionInfoWrapper>
-    </TransactionWrapper>
   );
 };

@@ -1,6 +1,16 @@
 export type icon = (typeof iconOptions)[number];
 
-export const iconOptions = <const>['bell', 'more', 'masterCard', 'home', 'card', 'add', 'calendar', 'settings'];
+export const iconOptions = <const>[
+  'bell',
+  'more',
+  'masterCard',
+  'home',
+  'card',
+  'add',
+  'calendar',
+  'settings',
+  'bigCard',
+];
 
 export interface StyledSvgIconProps {
   className?: string;

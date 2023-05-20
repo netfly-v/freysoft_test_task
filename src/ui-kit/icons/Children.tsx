@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyledSvgIconProps} from './types';
-import {Add, Bell, Calendar, Card, Home, MasterCard, More, Settings} from './paths';
+import {Add, Bell, BigCard, Calendar, Card, Home, MasterCard, More, Settings} from './paths';
 
 export const SvgChildren: React.FC<StyledSvgIconProps> = ({type, fillChildren}) => {
   if (type === 'bell') {
@@ -27,5 +27,9 @@ export const SvgChildren: React.FC<StyledSvgIconProps> = ({type, fillChildren}) 
   if (type === 'settings') {
     return <Settings fillChildren={fillChildren} />;
   }
+  if (type === 'bigCard') {
+    return <BigCard fillChildren={fillChildren} />;
+  }
+
   return null;
 };

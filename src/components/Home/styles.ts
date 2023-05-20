@@ -1,14 +1,7 @@
-import {Avatar, Box, Select, Typography} from '@mui/material';
+import {Box, Select, Typography} from '@mui/material';
 import styled from 'styled-components';
 import {IconSvg} from '../../ui-kit/icons';
-
-export const HomeWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding-top: 36px;
-`;
+import {Section} from '../styles';
 
 export const BalanceCardSection = styled.div`
   width: 100%;
@@ -89,29 +82,7 @@ export const StyledMasterCardIcon = styled(IconSvg)`
   margin-left: 26px;
 `;
 
-export const AnalyticsSection = styled(Box)`
-  &.MuiBox-root {
-    margin-top: 32px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-`;
-
-export const TitleHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-`;
-
-export const Title = styled(Typography)`
-  &.MuiTypography-root {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 28px;
-  }
-`;
+export const AnalyticsSection = Section;
 
 export const StyledSelect = styled(Select)`
   &.MuiInputBase-root {
@@ -182,66 +153,4 @@ export const ChartBarName = styled(Typography)`
   }
 `;
 
-export const TransactionSection = AnalyticsSection;
-
-export const TransactionText = styled(Typography)`
-  &.MuiTypography-root {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    color: ${({theme}) => theme.palette.text.gray};
-  }
-`;
-
-export const TransactionWrapper = styled(Box)`
-  &.MuiBox-root {
-    margin-top: 16px;
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background: ${({theme}) => theme.palette.background.gray};
-  }
-`;
-
-export const TransactionImg = styled(Avatar)`
-  &.MuiAvatar-root {
-    width: 39px;
-    height: 39px;
-  }
-`;
-
-export const TransactionInfoWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 12px 0 16px;
-`;
-
-export const TransactionInfoLeft = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: space-between;
-`;
-
-export const TransactionInfoRight = styled(TransactionInfoLeft)`
-  align-items: flex-end;
-`;
-
-export const TransactionName = styled(Typography)`
-  &.MuiTypography-root {
-    font-size: 16px;
-    line-height: 19px;
-  }
-`;
-
-export const TransactionSum = styled(Typography)`
-  &.MuiTypography-root {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    color: ${({theme}) => theme.palette.text.green};
-  }
-`;
+export const TransactionSection = Section;
