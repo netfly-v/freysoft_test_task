@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyledSvgIconProps} from './types';
-import {Add, Bell, BigCard, Calendar, Card, Home, MasterCard, More, Settings} from './paths';
+import {Add, Bell, BigCard, Calendar, Card, Home, PrevArrow, MasterCard, More, NextArrow, Settings, Dot} from './paths';
 
 export const SvgChildren: React.FC<StyledSvgIconProps> = ({type, fillChildren}) => {
   if (type === 'bell') {
@@ -29,6 +29,15 @@ export const SvgChildren: React.FC<StyledSvgIconProps> = ({type, fillChildren}) 
   }
   if (type === 'bigCard') {
     return <BigCard fillChildren={fillChildren} />;
+  }
+  if (type === 'prevArrow') {
+    return <PrevArrow />;
+  }
+  if (type === 'nextArrow') {
+    return <NextArrow />;
+  }
+  if (type === 'dot') {
+    return <Dot fillChildren={fillChildren} />;
   }
 
   return null;

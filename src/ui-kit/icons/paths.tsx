@@ -161,3 +161,21 @@ export const BigCard: React.FC<StyledSvgIconProps> = ({fillChildren}) => (
     />
   </>
 );
+
+export const PrevArrow: React.FC = () => (
+  <>
+    <path d="M7 13L1 7L7 1" stroke="#0F172A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </>
+);
+
+export const NextArrow: React.FC = () => (
+  <>
+    <path d="M1 13L7 7L1 1" stroke="#0F172A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </>
+);
+
+export const Dot: React.FC<StyledSvgIconProps> = ({fillChildren}) => (
+  <>
+    <circle cx="3" cy="3" r="3" fill={fillChildren ? fillChildren : '#A3A3A3'} />
+  </>
+);

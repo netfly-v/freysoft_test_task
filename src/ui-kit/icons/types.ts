@@ -10,6 +10,9 @@ export const iconOptions = <const>[
   'calendar',
   'settings',
   'bigCard',
+  'prevArrow',
+  'nextArrow',
+  'dot',
 ];
 
 export interface StyledSvgIconProps {

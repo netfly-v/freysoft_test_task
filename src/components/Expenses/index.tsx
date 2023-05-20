@@ -2,10 +2,11 @@ import React, {useEffect} from 'react';
 import {ButtonText, PageWrapper, Title, TitleHeader} from '../styles';
 import {ExpensesSection, TotalBalanceSection} from './styles';
 import {BalanceCard} from '../../ui-kit/BalanceCard';
-import {Calendar} from '../../ui-kit/Calendar';
-import {accNumber, balance, transactionsData} from '../../mockData/common';
+// import {Calendar} from '../../ui-kit/Calendar';
+import {accNumber, balance, daysWithSpents, transactionsData} from '../../mockData/common';
 import {Button} from '@mui/material';
 import {Statement} from '../../ui-kit/Statement';
+import {WeekCalendar} from '../../ui-kit/WeekCalendar';
 
 export const Expenses: React.FC = () => {
   useEffect(() => {
@@ -13,7 +14,8 @@ export const Expenses: React.FC = () => {
   }, []);
   return (
     <PageWrapper>
-      <Calendar />
+      {/* <Calendar /> */}
+      <WeekCalendar daysWithSpents={daysWithSpents} />
       <TotalBalanceSection>
         <BalanceCard variant="primary" sum={balance} accountNum={accNumber} />
         <BalanceCard variant="secondary" sum={balance} accountNum={accNumber} />

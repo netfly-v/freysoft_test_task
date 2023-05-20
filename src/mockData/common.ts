@@ -33,3 +33,4 @@ export const transactionsData = [
     totalBudget: 2000,
   },
 ];
+export const daysWithSpents = ['20', '21', '22', '23', '24'];
