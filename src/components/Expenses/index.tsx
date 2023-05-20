@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {ButtonText, PageWrapper, Title, TitleHeader} from '../styles';
 import {ExpensesSection, TotalBalanceSection} from './styles';
 import {BalanceCard} from '../../ui-kit/BalanceCard';
@@ -8,6 +8,9 @@ import {Button} from '@mui/material';
 import {Statement} from '../../ui-kit/Statement';
 
 export const Expenses: React.FC = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <PageWrapper>
       <Calendar />
